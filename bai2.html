@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Novell Services Login</title>
+  </head>
+  <body>
+    <h1>Novell Services Login</h1>
+    <form action="/submit_form" method="post">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required><br>
+      <label for="city">City of Employment:</label><br>
+      <input type="text" id="city" name="city" required><br>
+      <label for="webserver">Web server:</label><br>
+      <input type="text" id="webserver" name="webserver" required><br>
+      <label for="role">Please specify your role:</label><br>
+      <select id="role" name="role" required>
+        <option value="">Choose a server</option>
+        <option value="admin">Admin</option>
+        <option value="engineer">Engineer</option>
+        <option value="manager">Manager</option>
+        <option value="guest">Guest</option>
+      </select><br>
+      <label for="singlesignon">Single Sign-on to the following:</label><br>
+      <input type="checkbox" id="mail" name="mail" value="mail">
+      <label for="mail">Mail</label><br>
+      <input type="checkbox" id="payroll" name="payroll" value="payroll">
+      <label for="payroll">Payroll</label><br>
+      <input type="checkbox" id="selfservice" name="selfservice" value="selfservice">
+      <label for="selfservice">Self-service</label><br>
+      <input type="submit" value="Login">
+      <input type="button" value="Reset" onclick="resetForm()">
+    </form>
+    <script>
+      function resetForm() {
+        document.getElementById("myForm").reset();
+      }
+    </script>
+  </body>
+</html>
